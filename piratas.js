@@ -1,13 +1,4 @@
-function rand(m, n) {
-	return m + Math.floor((n - m + 1)*Math.random());
-}
-// randomly returns a string representing one of the six
-// Crown and Anchor faces
-function randFace() {
-  //return ["crown", "anchor", "corazones", "spade", "club", "diamond"]
-  return ["corona", "ancla", "corazones", "picas", "tréboles", "diamantes"]
-  [rand(0, 5)];
-}
+const f = require('./piratas_func.js');
 let fondos = 50;
 let ronda = 0;
 // starting conditions
@@ -20,7 +11,7 @@ while(fondos > 1 && fondos < 100) {
   // spade: 0, club: 0, diamond: 0 };
   let apuestas = { corona: 0, ancla: 0, corazones: 0,
   picas: 0, tréboles: 0, diamantes: 0 };
-  let totalBet = rand(1, fondos);
+  let totalBet = f.rand(1, fondos);
   if(totalBet === 7) {
     totalBet = fondos;
     apuestas.corazones = totalBet;
@@ -28,8 +19,8 @@ while(fondos > 1 && fondos < 100) {
     // distribute total bet
     let remaining = totalBet;
     do {
-      let bet = rand(1, remaining);
-      let face = randFace();
+      let bet = f.rand(1, remaining);
+      let face = f.randFace();
       apuestas[face] = apuestas[face] + bet;
       remaining = remaining - bet;
     } while(remaining > 0)
@@ -41,7 +32,7 @@ while(fondos > 1 && fondos < 100) {
   // roll dice
   const mano = [];
   for(let roll = 0; roll < 3; roll++) {
-    mano.push(randFace());
+    mano.push(f.randFace());
   }
   console.log(`\tmano: ${mano.join(', ')}`);
   // collect ganancias

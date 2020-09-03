@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Juego de los piratas</title>
+  </head>
+  <body>
+    <p id="botones"><button id="iniciar">Jugar</button>
+                    <button id="autini">Inicio automático</button>
+    </p>
+    <p id="ronda">Número de ronda</p>
+    <p id="fondos">Fondos Iniciales</p>
+    <div id="apuestas" style='font-size:30px'>
+      <p id="corona"> &#9818;</p>
+      <p id="ancla"> &#9765;</p>
+      <p id="corazones"> &hearts;</p>
+      <p id="picas"> &spades;</p>
+      <p id="tréboles"> &clubs;</p>
+      <p id="diamantes"> &diams;</p>
+      <p id="total">Total apostado</p>
+    </div>
+    <p id="mano">resultado de la mano</p>
+    <p id="ganancias">perdidas o ganancias</p>
+    <!-- Cambiar la salida al "body" -->
+    <script src="piratas_es.js" charset="utf-8"></script>
+  </body>
+</html>
+<!-- ronda 1:
+	iniciando fondos: 50p
+	apuestas: corona: 1 peniques
+		 ancla: 2 peniques
+		 corazones: 8 peniques
+		 picas: 0 peniques
+		 tréboles: 0 peniques
+		 diamantes: 35 peniques (total apostado: 46 peniques)
+	mano: diamantes, diamantes, ancla
+	ganancias: 72 -->

@@ -1,0 +1,34 @@
+function* rainbow() {
+yield 'red';
+yield 'orange';
+yield 'yellow';
+yield 'green';
+yield 'blue';
+yield 'indigo';
+yield 'violet';
+}
+for(let color of rainbow()) {
+console.log(color);
+}
+var iter = rainbow();
+iter.next();
+//it.next();
+/*
+"red", done: false }
+"orange", done: false }
+"yellow", done: false }
+"green", done: false }
+"blue", done: false }
+"indigo", done: false }
+"violet", done: false }
+undefined, done: true }
+*/
+function* interrogate() {
+const cara = yield "¿A que apuestas?";
+const apuesta = yield "¿Que cantidad?";
+return `Has apostado a ${cara} la cantidad de ${apuesta}.`;
+}
+const iter3 = interrogate();
+iter3.next();
+iter3.next('corazones');
+iter3.next('50');

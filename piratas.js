@@ -1,16 +1,7 @@
 const f = require('./piratas_func.js');
-let fondos;
-if (!process.argv[2]){
-  fondos = 50
-  console.log(`Jugar con fondos standar: ${fondos}`)
-}
-else {
-  fondos = Number(process.argv[2]);
-  if (fondos > 100){
-    console.log('Limite de fondos a jugar: 100');
-    process.exit();
-  }
-}
+let res = f.capturarFondos();
+let fondos = res.valor;
+console.log(res.mensaje + fondos);
 let ronda = 0;
 // starting conditions
 while(fondos > 1 && fondos <= 100) {

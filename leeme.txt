@@ -1,0 +1,4 @@
+The exports shorthand (e.j: amanda3.js) only works for exporting objects; if you
+want to export a function or some other value, you must use
+module.exports (e.j: amanda2.js) . Furthermore, you can’t meaningfully mix the
+two: use one or the other.

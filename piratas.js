@@ -9,8 +9,6 @@ while(fondos > 1 && fondos <= 100) {
   console.log(`ronda ${ronda}:`);
   console.log(`\tFondos iniciales: ${fondos}p`);
   // place apuestas
-  // let apuestas = { crown: 0, anchor: 0, corazones: 0,
-  // spade: 0, club: 0, diamond: 0 };
   let apuestas = { corona: 0, ancla: 0, corazones: 0,
   picas: 0, tréboles: 0, diamantes: 0 };
   let totalBet = f.rand(1, fondos);

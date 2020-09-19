@@ -1,7 +1,7 @@
 const f = require('./piratas_func.js');
 let res = f.capturarFondos();
 let fondos = res.valor;
-console.log(res.mensaje + fondos);
+console.log(res.mensaje);
 let ronda = 0;
 // starting conditions
 while(fondos > 1 && fondos <= 100) {
@@ -29,16 +29,13 @@ while(fondos > 1 && fondos <= 100) {
   console.log('\tapuestas: ' +
   Object.keys(apuestas).map(face => `${face}: ${apuestas[face]} peniques`).join('\n\t\t ') +
   ` (total: ${totalBet} peniques)`);
-  // roll dice
-  const mano = [];
-  for(let roll = 0; roll < 3; roll++) {
-    mano.push(f.randFace());
-  }
-  console.log(`\tmano: ${mano.join(', ')}`);
-  // collect ganancias
+  // se tiran los dados
+  let baza = f.baza();
+  console.log(baza.mensaje);
+  // ganancias TODO pérdidas
   let ganancias = 0;
-  for(let die=0; die < mano.length; die++) {
-    let face = mano[die];
+  for(let die=0; die < baza.mano.length; die++) {
+    let face = baza.mano[die];
     if(apuestas[face] > 0) ganancias = ganancias + apuestas[face];
   }
   fondos = fondos + ganancias;

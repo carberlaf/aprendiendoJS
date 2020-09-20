@@ -1,11 +1,14 @@
 module.exports = {
-  //apuestas: { corona: 0, ancla: 0, corazones: 0, picas: 0, tréboles: 0, diamantes: 0 },
-
+  limpiarApuestas(){
+    let apuestas = { corona: 0, ancla: 0, corazones: 0, picas: 0, tréboles: 0, diamantes: 0 };
+    return apuestas;
+  },
   rand(m, n) {
     return m + Math.floor((n - m + 1)*Math.random());
   },
   randFace() {
-    return ["corona", "ancla", "corazones", "picas", "tréboles", "diamantes"]
+    return Object.keys(this.limpiarApuestas())
+    //return ["corona", "ancla", "corazones", "picas", "tréboles", "diamantes"]
     [this.rand(0, 5)];
   },
   capturarFondos(){

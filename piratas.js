@@ -3,20 +3,19 @@ let res = f.capturarFondos();
 let fondos = res.valor;
 console.log(res.mensaje);
 let ronda = 0;
-// starting conditions
+// empezando
 while(fondos > 1 && fondos <= 100) {
   ronda++;
   console.log(`ronda ${ronda}:`);
   console.log(`\tFondos iniciales: ${fondos}p`);
-  // place apuestas
-  let apuestas = { corona: 0, ancla: 0, corazones: 0,
-  picas: 0, tréboles: 0, diamantes: 0 };
+  // colocar apuestas
+  let apuestas = f.limpiarApuestas();
   let totalBet = f.rand(1, fondos);
   if(totalBet === 7) {
     totalBet = fondos;
     apuestas.corazones = totalBet;
   } else {
-    // distribute total bet
+    // distribuir total bet
     let remaining = totalBet;
     do {
       let bet = f.rand(1, remaining);
@@ -40,5 +39,5 @@ while(fondos > 1 && fondos <= 100) {
   }
   fondos = fondos + ganancias;
   console.log(`\tganancias: ${ganancias}`);
-}
+} // fin empezando
 console.log(`\tFondos finales: ${fondos}`);

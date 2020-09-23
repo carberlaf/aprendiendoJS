@@ -28,8 +28,8 @@ $(document).ready(function() { //utilizando jquery
     tool.onMouseDown = function(event) {
       var c1 = Shape.Circle(event.point.x, event.point.y, 20);
       var c2 = Shape.Circle(event.point, 40);
-      c1.fillColor = 'black';
-      c2.fillColor = "rgba(255,0,0,0.5)";
+      c1.fillColor = 'green';
+      c2.fillColor = "rgba(255,0,0,0.25)";
     };
   paper.view.draw();
     //console.log('main.js loaded');

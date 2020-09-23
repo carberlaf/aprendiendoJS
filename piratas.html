@@ -3,35 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Juego de los piratas</title>
+    <link href="piratas.css" type="text/css" rel="stylesheet">
   </head>
-  <body>
-    <p id="botones"><button id="iniciar">Jugar</button>
-                    <button id="autini">Inicio automático</button>
+  <body style="font-size: 24px">
+	<button type="button" id="iniciar" onclick="iniFondos()">Iniciar</button>
+	<button type="button" id="autoini" onclick="iniciarAutomatico()">Inicio automático</button>
+	<p>Fondos Iniciales: <input type="number" id="fondos"></p>
+	<p>Número de ronda: <textarea id="ronda" rows="1"></textarea></p>
+	<div id="apuestas">APUESTAS
+	  <p><label for="r"> &#9818;</label><input type="text" id="r"></p>
+	  <p><label for="a"> &#9765;</label><input type="text" id="a"></p>
+	  <p><label for="c"> &hearts;</label><input type="text" id="c"></p>
+	  <p><label for="p"> &spades;</label><input type="text" id="p"></p>
+	  <p><label for="t"> &clubs;</label><input type="text" id="t"></p>
+	  <p><label for="d"> &diams;</label><input type="text" id="d"></p>
+	  <p>Total apostado:<textarea id="total" rows="1"></textarea>
+      <button type="button" id="limpiar">Limpiar</button>
+      <button type="button" id="jugar">Jugar</button>
     </p>
-    <p id="ronda">Número de ronda</p>
-    <p id="fondos">Fondos Iniciales</p>
-    <div id="apuestas" style='font-size:30px'>
-      <p id="corona"> &#9818;</p>
-      <p id="ancla"> &#9765;</p>
-      <p id="corazones"> &hearts;</p>
-      <p id="picas"> &spades;</p>
-      <p id="tréboles"> &clubs;</p>
-      <p id="diamantes"> &diams;</p>
-      <p id="total">Total apostado</p>
-    </div>
-    <p id="mano">resultado de la mano</p>
-    <p id="ganancias">perdidas o ganancias</p>
-    <!-- Cambiar la salida al "body" -->
-    <script src="piratas_es.js" charset="utf-8"></script>
+	</div>
+	<p>resultado de la mano: <textarea id="mano" rows="3"></textarea></p>
+	<p>perdidas o ganancias: <textarea id="ganancias" rows="1"></textarea></p>
+	<!-- Cambiar la salida al "body" Hecho -->
+	<script src="piratas_es.js" charset="utf-8"></script>
   </body>
 </html>
-<!-- ronda 1:
-	iniciando fondos: 50p
-	apuestas: corona: 1 peniques
-		 ancla: 2 peniques
-		 corazones: 8 peniques
-		 picas: 0 peniques
-		 tréboles: 0 peniques
-		 diamantes: 35 peniques (total apostado: 46 peniques)
-	mano: diamantes, diamantes, ancla
-	ganancias: 72 -->

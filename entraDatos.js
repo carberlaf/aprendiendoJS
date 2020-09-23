@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const prueba = require('./prueba');
 process.stdin.setEncoding('utf8');
-prueba.read;
-prueba.a
+var a = [];
+a.push(prueba.read);
+console.log(a);
 //process.stdin.resume();
 //prueba.prompt = ('Entra datos=>');
 //console.log('Entrar datos ');

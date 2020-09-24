@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple HTML</title>
+  <link rel="stylesheet" href="simple.css">
+</head>
+<body>
+  <header>
+    <h1>Simple HTML</h1>
+  </header>
+  <div class="botones">
+    <button data-action="highlight" data-containing="fancy" > Highlight paragraphs containing "fancy"</button>
+    <button data-action="removeHighlights">Remove highlights</button>
+    <button type="button" name="crearP">Crea párrafos</button>
+  </div>
+  <div id="content">
+    <p>This is a <i>simple</i> HTML file.</p>
+    <div class="callout">
+      <p>This is as fancy as we'll get!</p>
+    </div>
+    <p>IDs (such as <span class="code">#content</span>) are unique (there can only be one per page).</p>
+    <p>Classes (such as <span class="code">.callout</span>) can be used on many elements.</p>
+    <div id="callout2" class="callout fancy">
+      <p>A single HTML element can have multiple classes.</p>
+    </div>
+  </div>
+  <script src="simple.js" charset="utf-8"></script>
+</body>
+</html>
